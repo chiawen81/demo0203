@@ -1,0 +1,95 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./../helpers/_variables";
+@import "./../helpers/_base";
+// —————————————————————— header ——————————————————————
+.top-menu{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    top: 37.5%;
+    right: 1%;
+    li{
+        padding-left: 32px;
+        a{
+            color: $gray ;
+        }
+    }
+}
+@media(max-width:576px){
+    .top-menu{
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+
+        top: 20px;
+        right: 26px;
+        li{
+            padding-left: 0x;
+        }
+    }
+}
+
+// —————————————————————— footer ——————————————————————
+.footer-bg{
+    height: 400px;
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/exhibition-week6/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+
+    .footer-title{
+       display: flex;
+       flex-direction: column;
+       padding-bottom: 36px;
+
+       h2{
+           color: white;
+           line-height: 1.5;
+       }
+    }
+
+    .subscribe-news{
+        padding-top: 12px;
+        input{
+            width: 210px;
+            border-radius: 4px 0px 0px 4px;
+            padding: 12px;
+            border: white;
+            margin-right: -5px;
+        }
+        button{
+            background-color: $pink;
+            color: $white;
+            border-radius: 0px 4px 4px 0px;
+            padding: 12px 50px;
+            border: $pink;
+        }
+    }
+}
+
+.footer-text{
+    display: flex;
+    justify-content: flex-start;
+    padding: 28px 15px;
+
+    p{
+        flex-grow: 1;
+    }
+
+    ul li a{
+        color: $gray;
+        padding-left: 16px;
+
+    }
+}
+@media (max-width:576px){
+    .footer-text{
+        flex-direction: column;
+        padding: 16px 15px;
+    }
+    .m-ds-none{
+        display: none !important;
+    }
+}

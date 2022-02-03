@@ -1,0 +1,60 @@
+.bold{
+    font-weight: bold;
+}
+.no-border{
+    border: none !important;
+}
+.no-bolder-bottom{
+    border-bottom: none !important;
+}
+.ft-16{
+    font-size: 16px !important;
+}
+.ft-40{
+    font-size: 40px !important;
+}
+.fw-medium{
+    font-weight: medium;
+}
+.fw-normal{
+    font-weight: normal;
+}
+.w-160{
+    width: 160px !important;
+}
+.btn-space{
+    padding: 10px 48px !important;
+    width: 165px;
+}
+.show-in-mobile{
+    display: none !important;
+}
+@media (max-width:430px){
+    .show-in-mobile{
+        display: unset !important;
+    }
+
+}
+// .flex-s-middle{
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center ;
+// }
+
+
+
+@media (max-width:576px){
+    .m-ds-none{
+        display: none;
+    }
+// 手機版字體大小
+    .ft-md-32{
+        font-size: 32px;
+    }
+    .ft-md-22{
+        font-size: 22px;
+    }
+    .ft-md-20{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,155 @@
+@import "./../../style/all.scss";
+// —————————————— 上方進度條 ——————————————
+.progress{
+  height: auto;
+  background-color: $white;
+  padding-top: 20px;
+
+  .progress-line{
+      width: 66.7%;
+      border-top: 2px solid $pink;
+      display: flex;
+      justify-content: space-around;
+      padding: 4px;
+
+      span{
+          font-size: 16px;
+          position: relative;
+      }
+      span:before{
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 40%;
+          margin: auto auto;
+          padding-bottom: 3px;
+          position: absolute;
+          left: 45%;
+          top: -36%;
+      }
+      span.done::before{
+          background-color: $pink;
+      }
+      span.coming::before{
+          border:1px solid  $pink;
+          background-color: $white;
+      }
+  }
+}
+
+@media(max-width:576px){
+  .progress{
+      .progress-line{
+          width: 100%;
+          span{
+              font-size: 14px;
+          }
+      }
+  }
+}
+
+
+
+// —————————————— 左側購物車清單 ——————————————
+.cart-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .cart-list{
+      .cart-card{
+          margin-bottom: 20px;
+          img{
+              height: 84px;
+              width: auto;
+              padding-right: 18px;
+          }
+          .m-info{
+              display: none;
+          }
+      }
+  }
+  .cart-btn{
+      button{
+          max-width:160px ;
+      }
+  }
+
+
+}
+@media(max-width:576px){
+.cart{
+  display: flex;
+  flex-direction: column-reverse;
+  .order{
+      margin-bottom: 24px;
+  }
+  .cart-info{
+      .cart-list{
+          .cart-card{
+              display: flex;
+              flex-direction: row;
+              img{
+                  padding-right: 15px;
+                  padding-left: 15px;
+              }
+              div.col-8{
+                  width: 57%;
+                  padding-left: 0;
+                  padding-right: 0;
+
+                  .text-gray{
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      width: 100%;
+                  }
+              }
+              // p{
+              //     display: inline-block;
+              // }
+          }
+          .m-info{
+              display: unset;
+          }
+
+      }
+  .cart-btn{
+      display: flex;
+      justify-content: space-between;
+      button{
+          max-width: 166px;
+          padding: 10px 58px !important;
+      }
+  }
+}
+
+}
+}
+
+
+
+
+// —————————————— 右側訂購人資訊 ——————————————
+.order{
+  .form-group{
+      input{
+          padding: 7px 12px;
+          width: 100%;
+          border: 1px solid $gray2;
+          border-radius: 4px;
+      }
+  }
+
+  .subtital{
+      margin-top: 56px;
+      p,h5{
+          margin-bottom: 6px;
+          display: flex;
+          justify-content: space-between;
+      }
+      button{
+          width: 100%;
+      }
+  }
+}

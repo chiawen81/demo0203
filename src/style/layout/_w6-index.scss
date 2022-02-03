@@ -1,0 +1,189 @@
+// @import './../helpers/variables';
+$svImg:"https://hexschool.github.io/webLayoutTraining1st/exhibition-week6/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg";
+
+.sv-img{
+    background-image: url($svImg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 480px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ;
+}
+@media(max-width:576px){
+  .sv-img{
+      align-items: flex-end;
+      padding-bottom: 80px;
+  }
+}
+.nav-scroller {
+    height: 52px; /* 隱藏下方捲軸 */
+    overflow-y: hidden; 
+    border-bottom: 1px solid $gray;
+}
+.nav-scroller .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;  //隱藏下方捲軸
+    overflow-x:scroll ;
+    white-space: nowrap;
+    a{
+        color: $gray2;
+        padding: 14px 25px;
+    }
+}
+.hot-card{
+    margin: 0 0 16px 0;
+}
+.hot-card-info{
+    background-color:$light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 24px;
+}
+.hot-card-date{
+    background-color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 24px;
+    div{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        h5{
+            line-height: 1.5;
+            font-weight: 900;
+        }
+        img{
+            padding-bottom: 50px;
+            width: 24px;
+        }
+    }
+
+}
+@media(max-width:576px){
+    .hot-card{
+        >img{
+            padding: 24px 15px 8px 15px;
+        }
+    }
+    .m-hot-card-btn{
+        background-color: $light-gray;
+        display: flex;
+        padding-bottom: 24px;
+
+        button{
+            padding: 10px 16px !important;
+            width: 100px;
+            font-size: 16px;
+        }
+    }
+    .m-hot-card-info{
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        h6{
+            flex-grow: 1;
+            text-align: right;
+            line-height: 2.5;
+        }
+    }
+    .hot-card-info{
+        padding: 0 15px 4px 15px;
+        h5.fw-normal.flex-grow-1{
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+.live-bg{
+    width: 100%;
+    height: 482px;
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/exhibition-week6/people2.png);
+}
+.live-title{
+    display: flex;
+    color: white;
+    font-weight: 900;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+
+    span{
+        margin: 0 12px;
+        height: 42px;
+        width: 1px;
+        background-color: white;
+    }
+}
+.live-intro{
+    color: white;
+    h5{
+        font-weight: lighter !important;
+        line-height: 1.5;
+
+    }
+}
+@media(max-width:576px){
+    .live-bg{
+        height: 464px;
+        .col-12.col-lg-5.bg-purple.px-24{
+            padding-bottom: 40px;
+        }
+    }
+        h5.pb-16{
+            font-size: 16px;
+        }
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+
+
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    
+  }
+@media(max-width:576px){
+    .swiper-wrapper{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+
+        .swiper-slide {
+            padding-bottom: 40px;
+
+            img{
+                width: 345px;  
+            }
+        }
+    }
+
+}
